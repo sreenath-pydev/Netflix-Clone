@@ -1,0 +1,37 @@
+.Row{
+    background-color: black;
+    color: #fff;
+    padding: 20px;
+    width: 100%;
+    
+}
+.rowposters{
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    
+    
+}
+.rowposters::-webkit-scrollbar{
+    display: none;
+}
+.RowImage{
+    cursor: pointer;
+    height: 240px;
+    width: 220px;
+    padding: 8px;
+    transition: transform 450ms;
+}
+.RowImage:hover{
+    transform: scale(1.1);
+}
+.SmallRowImage{
+    cursor: pointer;
+    height: 170px;
+    width: 150px;
+    padding: 8px;
+    transition: transform 450ms;
+}
+.SmallRowImage:hover{
+    transform: scale(1.1);
+}
