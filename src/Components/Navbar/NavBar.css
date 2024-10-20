@@ -1,78 +1,49 @@
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
-    color: white;
-    position: absolute; 
-    z-index: 100; 
-    width: 100%;
-    box-sizing: border-box; 
-  }
+.navbar  {
+  display: flex!important;
+  align-items: center!important;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: black!important;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%)!important; /* Gradient from dark to transparent */
+  color: white;
+  position: absolute!important; 
+  z-index: 100;
+  width: 100%;
+  box-sizing: border-box; 
+}
+.navbar-dark .navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.5);
+}
 
-  .navbar__logo img {
-    width: 100px; 
-  }
-  
-  .navbar__links {
-    list-style: none;
-    display: flex;
-    gap: 20px; 
-  }
-  
-  .navbar__links li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
-  }
-  
-  .navbar__links li a:hover {
-    color: #e50914; 
-  }
-  
-  .navbar__search {
-    display: flex;
-    align-items: center;
-    
-  }
-  
-  .navbar__search input {
-    padding: 5px;
-    border: none;
-    border-radius: 4px;
-    background-color: rgba(128, 128, 128, 0.1);
-  }
-  
-  .navbar__search button {
-    padding: 6px 10px;
-    border: none;
-    border-radius: 4px;
-    background-color: #e50914; 
-    color: white;
-    cursor: pointer;
-    margin-left: 10px; 
-  }
-  
-  .navbar__search button:hover {
-    background-color: #f40612; 
-  }
-  
-  .navbar__login {
-    margin-left: 20px; 
-  }
-  
-  .navbar__login button {
-    padding: 6px 10px;
-    border: none;
-    border-radius: 4px;
-    background-color: #e50914; 
-    color: white;
-    cursor: pointer;
-  }
-  
-  .navbar__login button:hover {
-    background-color: #f40612; 
-  }
-  
+.navbar .navbar-dark .navbar-nav {
+  justify-content: space-between;
+}
+
+.navbar .navbar-brand img {
+  width: 100px; /* Adjust logo size */
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #fff; /* White text color for nav links */
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #e50914; /* Netflix red on hover */
+}
+
+.navbar-dark .navbar-nav .nav-link p {
+  display: inline;
+  margin-right: 10px;
+}
+
+.navbar .dropdown-menu {
+  background-color: #000; /* Black background for dropdown */
+}
+
+.navbar .dropdown-menu .dropdown-item {
+  color: #fff; /* White text color for dropdown items */
+}
+
+.navbar .dropdown-menu .dropdown-item:hover {
+  background-color: #e50914; /* Netflix red on hover */
+}
