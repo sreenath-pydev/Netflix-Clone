@@ -21,6 +21,14 @@ This project is a Netflix clone built using React, designed to replicate the use
 - **Bootstrap**: CSS framework for responsive design.
 - **YouTube API**: For video playback functionality.
 - **TMDb API**: For fetching movie and TV show data.
+## Setup Instructions
+
+To run this project locally, you will need to obtain an API key from The Movie Database (TMDb). Follow these steps:
+
+ **Obtain TMDb API Key**:
+   - Go to [The Movie Database (TMDb)](https://www.themoviedb.org/) and create an account if you don't have one.
+   - Navigate to the API section and apply for an API key.
+
 
 ## Installation
 
@@ -39,7 +47,9 @@ This project is a Netflix clone built using React, designed to replicate the use
 4. Start the development server:
    ```bash
    npm start
-
+5. Open Constants.js file and add your TMDB API key:
+   ```bash
+   export const API_KEY = "ADD your TMDB API key here";
 ## Usage
 Once the application is running, you can browse through different categories of movies and TV shows. Click on any movie poster to watch its trailer.
 ## Contributing
