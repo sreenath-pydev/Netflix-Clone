@@ -48,6 +48,7 @@ const NavbarComponent = () => {
                   />
                 }
                 id="basic-nav-dropdown"
+                drop="down"
               >
                 <NavDropdown.Item href="#action/3.1">Profile</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">Settings</NavDropdown.Item>

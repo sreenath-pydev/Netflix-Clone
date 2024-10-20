@@ -37,7 +37,9 @@
 }
 
 .navbar .dropdown-menu {
-  background-color: #000; /* Black background for dropdown */
+  background-color: #000;
+  right: 0!important; 
+  left: auto!important;
 }
 
 .navbar .dropdown-menu .dropdown-item {
