@@ -26,10 +26,10 @@ This project is a Netflix clone built using React, designed to replicate the use
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/sreenath-pydev/netflix.git
+   git clone https://github.com/sreenath-pydev/Netflix-Clone.git
 2. Navigate to the project directory:
    ```bash
-   cd netflix
+   cd Netflix-Clone
 
 3. Install the dependencies:
    ```bash
