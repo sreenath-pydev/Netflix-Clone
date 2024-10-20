@@ -56,6 +56,7 @@ Once the application is running, you can browse through different categories of 
 Contributions are welcome! If you'd like to contribute to this project, please fork the repository and submit a pull request.
 ## License
 This project is for educational purposes only and is not intended for commercial use. All rights to the original Netflix platform are owned by Netflix, Inc.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 ## Acknowledgments
 The Movie Database **(TMDb)** for providing the movie data.
 **YouTube API** for video playback functionality.
