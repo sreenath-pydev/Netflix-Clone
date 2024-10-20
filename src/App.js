@@ -1,9 +1,19 @@
+import React from "react";
 import "./App.css";
-
+import Banner from "./Components/Banner/Banner";
+import NavBar from "./Components/Navbar/NavBar";
+import Rowpost from "./Components/RowPost/Rowpost";
+import {Actions, Originals, Horror} from './Components/Urls.js'
+import Footer from "./Components/Footer/Footer.js";
 function App() {
   return (
     <div className="App">
-      <h1>Netflix Clone Project initialization</h1>
+      <NavBar/>
+      <Banner/>
+      <Rowpost url={Originals} title="NETFLIX ORIGINALS" />
+      <Rowpost url={Actions} title="Trending Now" isSmall/>
+      <Rowpost url={Horror} title="Horror" isSmall/>
+      <Footer/>
     </div>
   );
 }
