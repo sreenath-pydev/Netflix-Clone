@@ -55,14 +55,16 @@ export default function RowPost(props) {
   };
 
   return (
-    <div className="Row ">
-      <h3>{props.title}</h3>
+    <div className={props.isFirst ? "FirstRow" : "Row"} >
+      <h5>{props.title}</h5>
       <div className="rowposters">
         {movies.map((movie) => (
           <img
             onClick={() => fetchMovieTrailer(movie.id)} // Calls the trailer function when clicked
             key={movie.id}
-            className={props.isSmall ? "SmallRowImage" : "RowImage"} // Added PascalCase for class names
+            className={props.isSmall ? "SmallRowImage" : 
+              props.isFirst ? "FirstRowImage" : 
+              "RowImage"} // Added PascalCase for class names
             src={`${imageUrl + movie.backdrop_path}`} // Movie poster image
             alt={movie.title || movie.name} // Fallback to 'name' if 'title' is undefined
           />

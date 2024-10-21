@@ -1,24 +1,41 @@
 .Row{
-    background-color: black;
+    background-color: #000;
     color: #fff;
     padding: 20px;
     width: 100%;
+   
+}
+
+.FirstRow{
+    background-color: transparent;
+    color: #fff;
+    padding: 20px;
+    width: 100%;
+    height: 200px;
     
 }
 .rowposters{
     display: flex;
     overflow-x: scroll;
-    overflow-y: hidden;
-    
-    
+    overflow-y: hidden;  
 }
 .rowposters::-webkit-scrollbar{
     display: none;
 }
+.FirstRowImage{
+    cursor: pointer;
+    height: 130px;
+    width: 250px;
+    padding: 8px;
+    transition: transform 450ms;
+}
+.FirstRowImage:hover{
+    transform: scale(1.1);
+}
 .RowImage{
     cursor: pointer;
-    height: 240px;
-    width: 220px;
+    height: 220px;
+    width: 280px;
     padding: 8px;
     transition: transform 450ms;
 }
@@ -27,8 +44,8 @@
 }
 .SmallRowImage{
     cursor: pointer;
-    height: 170px;
-    width: 150px;
+    height: 150px;
+    width: 230px;
     padding: 8px;
     transition: transform 450ms;
 }
