@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./RowPost.css";
 import axios from "../Axios";
 import { imageUrl, API_KEY } from "../Constants/Constants";
@@ -54,10 +54,20 @@ export default function RowPost(props) {
     },
   };
 
+  //  Horizontal Scroll on Mouse Wheel
+  const cardRef = useRef();
+  const handleWheel = (event)=>{
+    event.preventDefault();
+    cardRef.current.scrollLeft += event.deltaY;
+  }
+  useEffect(()=>{
+    cardRef.current.addEventListener('wheel', handleWheel)
+  },[])
+  
   return (
     <div className={props.isFirst ? "FirstRow" : "Row"} >
       <h5>{props.title}</h5>
-      <div className="rowposters">
+      <div className="rowposters" ref={cardRef}>
         {movies.map((movie) => (
           <img
             onClick={() => fetchMovieTrailer(movie.id)} // Calls the trailer function when clicked
