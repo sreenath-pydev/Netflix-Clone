@@ -21,7 +21,7 @@ const NavbarComponent = () => {
           <div className="d-flex justify-content-between w-100">
             {/* Left Section: Links */}
             <Nav className="left-section">
-              <Nav.Link href="/">Home</Nav.Link>
+              <Nav.Link href="/" style={{ color: '#ffffff' }}>Home</Nav.Link>
               <Nav.Link href="/tv-shows">TV Shows</Nav.Link>
               <Nav.Link href="/movies">Movies</Nav.Link>
               <Nav.Link href="/latest">Latest</Nav.Link>
@@ -34,7 +34,7 @@ const NavbarComponent = () => {
                 <i className="fas fa-search" style={{ color: '#fff', fontSize: '20px' }}></i>
               </Nav.Link>
               <Nav.Link>
-                <p style={{ display: 'inline', marginRight: '10px', color: '#fff' }}>Children</p>
+                <p style={{ display: 'inline', marginRight: '10px', color: '#rgba(255, 255, 255, 0.5)' }}>Children</p>
               </Nav.Link>
               <Nav.Link>
                 <i className="fas fa-bell" style={{ color: '#ffffff' }}></i>
