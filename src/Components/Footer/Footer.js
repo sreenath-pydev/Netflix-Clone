@@ -5,20 +5,20 @@ function Footer() {
   return (
     <div className="footer-container">
       <div className="footer-links">
-        <a href="#">FAQ</a>
-        <a href="#">Help Center</a>
-        <a href="#">Account</a>
-        <a href="#">Media Center</a>
-        <a href="#">Investor Relations</a>
-        <a href="#">Jobs</a>
-        <a href="#">Redeem Gift Cards</a>
-        <a href="#">Buy Gift Cards</a>
-        <a href="#">Ways to Watch</a>
-        <a href="#">Terms of Use</a>
-        <a href="#">Privacy</a>
-        <a href="#">Cookie Preferences</a>
-        <a href="#">Corporate Information</a>
-        <a href="#">Contact Us</a>
+        <span >FAQ</span>
+        <span >Help Center</span>
+        <span >Account</span>
+        <span >Media Center</span>
+        <span >Investor Relations</span>
+        <span >Jobs</span>
+        <span >Redeem Gift Cards</span>
+        <span >Buy Gift Cards</span>
+        <span >Ways to Watch</span>
+        <span >Terms of Use</span>
+        <span >Privacy</span>
+        <span >Cookie Preferences</span>
+        <span >Corporate Information</span>
+        <span >Contact Us</span>
       </div>
       <div className="footer-info">
         <p>© 2024 Netflix Clone, All Rights Reserved.</p>
