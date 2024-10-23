@@ -1,0 +1,200 @@
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    color: white;
+    width: 100%;
+    background-image: linear-gradient(#0000007e, #0000007e), url('https://assets.nflxext.com/ffe/siteui/vlv3/7c0e18aa-2c95-474d-802e-7f30e75dcca4/web/IN-en-20241014-TRIFECTA-perspective_e7121311-c11e-4809-a3e6-22abffa33569_large.jpg');
+  }
+  .logo-container{
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    margin-top: 25px;
+    width: 1000px;
+  }
+  .Sign-in{
+    text-align: start;
+  }
+  .logo {
+    margin-bottom: 20px;
+    width: 148px;
+    height: 40px;
+  }
+  .login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+    width: 450px;
+    height: 525px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+  }
+  .login h1 { 
+    align-self: flex-start; 
+    margin: 0; 
+    padding-left: 75px; 
+    position: relative;
+    top: -40px; 
+    font-size: 32px;
+    font-weight: 700;
+  }
+
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    width: 314px;
+  }
+  .login-form p, a{
+    text-align: center;
+    padding-top: 10px;
+    color: white;
+  }
+ 
+  .login-form .remember-me{
+    display: flex;
+  }
+  .login-form .remember-me p{
+    padding-left: 10px;
+    padding-top: 15px;
+  }
+  .login-form .set-sign{
+    position: relative;
+    bottom: 30px;
+    text-align: start; 
+  }
+  .login-form .set-sign a{
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .login-form input {
+    padding: 10px;
+    margin-bottom: 10px;
+    height: 56px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: white;
+    font-weight: 500;
+  }
+  
+  .login-form button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #e50914; 
+    color: white;
+    cursor: pointer;
+    font-weight: 500;
+  }
+  .login-form .login-with-code{
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #555;
+    color: white;
+    cursor: pointer;
+  }
+ 
+  .login-footer {
+    margin-top: 0px;
+    background-color: black;
+    width: 100%;
+    text-align: center;
+    color: #757575;
+    font-size: 13px;
+    padding-top: 10px;
+  }
+  .login-footer .footer-text a{
+    color: dodgerblue;
+  }
+  .login-footer a {
+    color: #757575;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  
+  .footer-links {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px 0;
+  }
+  
+  .footer-links li {
+    margin: 10px 15px;
+  }
+  
+  .language-selector {
+    margin: 20px 0;
+  }
+  
+  .language-selector select {
+    background-color: #000;
+    color: white;
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+  }
+  
+  .footer-country {
+    margin-top: 20px;
+  }
+  
+  /* Mobile View Styles */
+@media (max-width: 768px) {
+    
+    .login-container {
+       padding :20px ;
+       overflow:hidden ;
+       height :100vh ;
+       background-color:black ;
+       background-image:none ;
+    }
+    
+    .logo-container{
+       display:flex ;
+       height :100px ;
+       width :100% ;
+    }
+    
+    .login {
+       width :100% ; 
+       max-width :350px ; 
+       padding-top :50px ; 
+    }
+    
+    .login h1 {         
+       display: flex;
+       align-self:flex-start ; 
+       padding-left :0 ; 
+       font-size :28px ; 
+    }
+    
+    .login-footer {
+       font-size :13px ; 
+       padding-top :10px ;
+       color:#8c8c8c ;
+       text-align:start ;
+    }
+    
+    .login-form input {
+        height :48px ; 
+        margin-bottom :8px ; 
+    }
+
+    .login-form button, .login-form .login-with-code {  
+        height :48px ; 
+    }
+
+    .logo {  
+        width :120px ; 
+        height:auto ;  
+    }
+}
