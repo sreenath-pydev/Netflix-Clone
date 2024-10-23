@@ -1,0 +1,50 @@
+/* Make sure the player container takes up the full screen */
+.player {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black; /* To match YouTube background */
+    position: absolute;
+    overflow: hidden;
+}
+.player i{
+    color: red;
+    cursor: pointer;
+}
+.video-container {
+    width: 90%; /* Full screen width */
+    height: 90%; /* Full screen height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.player iframe{
+    margin-top: 50px;
+    width: 90vw;
+    height: 90vh;   
+}
+ .youtube-video {
+    width: 100vw; /* Full screen width */
+    height: 100vh; /* Full screen height */
+}
+
+/* Optional styling for player-info */
+.player-info {
+    width: 90%;
+    display: flex;
+    color: white;
+    justify-content: space-between;
+}
+
+/* Back button styling */
+.fa-arrow-left {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: white;
+    cursor: pointer;
+    font-size: 34px;
+}
