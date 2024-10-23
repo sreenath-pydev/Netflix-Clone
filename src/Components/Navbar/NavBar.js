@@ -1,11 +1,24 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import './NavBar.css'; // Custom styles
 import 'bootstrap/dist/css/bootstrap.min.css'; // Bootstrap styles
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap'; // Import Bootstrap components
 
 const NavbarComponent = () => {
+  // Add a class to the navbar when the user scrolls
+  const navRef = useRef();
+  
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      if(window.scrollY > 100) {
+        navRef.current.classList.add('nav-dark');
+      }else{
+        navRef.current.classList.remove('nav-dark');
+      }
+    })
+  },[]);
+
   return (
-    <Navbar  expand="lg" className="navbar-dark">
+    <Navbar ref={navRef}  expand="lg" className="navbar-dark">
       <div className="container-fluid">
         {/* Logo */}
         <Navbar.Brand href="/">
