@@ -20,10 +20,10 @@ export default function Banner() {
         .then((response) => {
           const randomIndex = Math.floor(Math.random() * response.data.results.length); // Get a random index
           setMovie(response.data.results[randomIndex]); // Set the movie state with the randomly selected movie
-          console.log(response.data.results[randomIndex]); // Log the random movie
+          //console.log(response.data.results[randomIndex]); // Log the random movie
         })
         .catch((error) => {
-          console.error("Error fetching the data", error); // Handle errors
+          //console.error("Error fetching the data", error); // Handle errors
         });
     };
 
