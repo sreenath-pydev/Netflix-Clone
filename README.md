@@ -38,7 +38,18 @@ To run this project locally, you will need to obtain an API key from The Movie D
    - Go to [Firebase Console](https://console.firebase.google.com/u/0/).
    - Create a new project and enable Authentication (Email/Password method).
    - Add your Firebase configuration details to your project.
-## Installation
+     
+## Hosting on AWS
+
+This project is hosted on **AWS S3** (Amazon Simple Storage Service), which provides a reliable and scalable solution for serving static websites. Here are some key points about the deployment:
+
+- **Static Website Hosting**: The application is deployed as a static website, allowing for fast load times and easy scalability.
+- **S3 Bucket Configuration**: The S3 bucket is configured to serve the React app, with appropriate permissions set for public access.
+- **Domain Management**: The site is accessible via the URL: [http://netflix-clone-bucket-s3.s3-website.eu-north-1.amazonaws.com](http://netflix-clone-bucket-s3.s3-website.eu-north-1.amazonaws.com)
+
+### Getting Started
+
+To run this project locally, follow these steps:
 
 1. Clone the repository:
    ```bash
