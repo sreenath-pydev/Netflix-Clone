@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
 import "./App.css";
 import Home from "./Home/Home";
-import { Routes, Route, Navigate, useNavigate } from "react-router-dom";
+import { Routes, Route, useNavigate } from "react-router-dom";
 import Login from "./Login/Login";
 import Player from "./Components/PLayer/Player";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "./Firebase/Firebase";
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
@@ -15,10 +15,10 @@ function App() {
     onAuthStateChanged(auth, async (user) => {
       if (user) {
         navigate("/");
-        console.log('logged in')
+        //console.log('logged in')
     }else{
         navigate("/login");
-        console.log('Logged out')
+        //console.log('Logged out')
     }
     });
   }, []);
