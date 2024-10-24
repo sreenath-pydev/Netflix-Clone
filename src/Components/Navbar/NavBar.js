@@ -2,20 +2,32 @@ import React, { useEffect, useRef } from 'react';
 import './NavBar.css'; // Custom styles
 import 'bootstrap/dist/css/bootstrap.min.css'; // Bootstrap styles
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap'; // Import Bootstrap components
+import { logout } from '../../Firebase/Firebase';
 
 const NavbarComponent = () => {
   // Add a class to the navbar when the user scrolls
   const navRef = useRef();
-  
+
   useEffect(() => {
-    window.addEventListener('scroll', () => {
-      if(window.scrollY > 100) {
-        navRef.current.classList.add('nav-dark');
-      }else{
-        navRef.current.classList.remove('nav-dark');
+    // Define the scroll event handler
+    const handleScroll = () => {
+      if (navRef.current) {  // Check if navRef.current is not null
+        if (window.scrollY > 100) {
+          navRef.current.classList.add('nav-dark');
+        } else {
+          navRef.current.classList.remove('nav-dark');
+        }
       }
-    })
-  },[]);
+    };
+
+    // Add the scroll event listener
+    window.addEventListener('scroll', handleScroll);
+
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
     <Navbar ref={navRef}  expand="lg" className="navbar-dark">
@@ -66,7 +78,7 @@ const NavbarComponent = () => {
                 <NavDropdown.Item href="#action/3.1">Profile</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">Settings</NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">Sign Out</NavDropdown.Item>
+                <NavDropdown.Item onClick={()=>{logout()}} href="#action/3.4">Sign Out</NavDropdown.Item>
               </NavDropdown>
             </Nav>
           </div>
