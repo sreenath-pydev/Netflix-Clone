@@ -4,7 +4,7 @@ import './Banner.css';
 import axios from '../Axios';
 import { imageUrl } from '../Constants/Constants';
 import RowPost from '../RowPost/Rowpost';
-import { Originals } from '../Urls';
+import { Trending } from '../Urls';
 import NLogo from './images/N_logo.png';
 
 export default function Banner() {
@@ -54,7 +54,7 @@ export default function Banner() {
         {/* Movie Title */}
         <h1>{Movie ? Movie.original_title || Movie.original_name : ""}</h1>
         {/* Top 10 Badge */}
-        <img style={{ width: '20px' }} src='https://www.netflix.com/tudum/top10/images/top10.png' /> #1 in TV Shows Today
+        <img style={{ width: '20px' }} src='https://www.netflix.com/tudum/top10/images/top10.png' alt="top-10-logo" /> #1 in TV Shows Today
         {/* Movie Overview Description */}
         <h2 className='banner-description'>
           {Movie ? trimText(Movie.overview, 200) : ""}
@@ -71,7 +71,7 @@ export default function Banner() {
       </div>
       {/* Fade effect at the bottom of the banner */}
       <div className="fade-bottum">
-        <RowPost url={Originals} title="NETFLIX ORIGINALS" isFirst />
+        <RowPost url={Trending} title="TRENDING NOW" isFirst />
       </div>
     </div>
   );
