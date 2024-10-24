@@ -1,24 +1,32 @@
 import React, { useState } from 'react';
 import './Login.css'; 
-
+import { signup, login } from '../Firebase/Firebase';
+import spinner_loading from './Images/loading.gif'
 export default function Login() {
   // State variables for form inputs
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [phoneNumber, setPhoneNumber] = useState('');
   const [signState, setSignState] = useState('Sign In');
   const [userName, setUserName] = useState('');
+  const [loading,setLoading] = useState(false)
 
-  // Handle form submission
-  const handleSubmit = (e) => {
+  // Function to switch between Sign Up and Sign In
+  const UserAuth = async (e) => {
     e.preventDefault();
-    console.log('Email:', email);
-    console.log('Password:', password);
-    console.log('Phone Number:', phoneNumber);
-    console.log('User Name:', userName);
+    setLoading(true);
+    if (signState === 'Sign In') {
+      await login(email, password);
+    } else {
+      await signup(userName, email, password);
+    }
+    setLoading(false);
   };
 
   return (
+    // Conditional rendering for loading
+    loading? <div className="spinner-loading">
+      <img src={spinner_loading} alt="Loading..." />
+      </div>:
     <div className="login-container">
       {/* Logo Section */}
       <div className="row logo-container">
@@ -32,7 +40,7 @@ export default function Login() {
       {/* Login Form Section */}
       <div className='login'>
         <h1>{signState}</h1>
-        <form className="login-form" onSubmit={handleSubmit}>
+        <form className="login-form" >
           {/* Conditional rendering for Sign Up */}
           {signState === 'Sign Up' && (
             <input
@@ -45,20 +53,11 @@ export default function Login() {
           )}
           <input
             type="email"
-            placeholder="Email or mobile number"
+            placeholder="Email "
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
           />
-          {signState === 'Sign Up' && (
-            <input
-              type="text"
-              placeholder="Mobile number"
-              value={phoneNumber}
-              onChange={(e) => setPhoneNumber(e.target.value)}
-              required
-            /> 
-          )}
           <input
             type="password"
             placeholder="Password"
@@ -66,7 +65,7 @@ export default function Login() {
             onChange={(e) => setPassword(e.target.value)}
             required
           />
-          <button type="submit">{signState === 'Sign In' ? 'Sign In' : 'Sign Up'}</button>
+          <button onClick={UserAuth} type="submit">{signState === 'Sign In' ? 'Sign In' : 'Sign Up'}</button>
           
           {signState === 'Sign In' && <p>OR</p>}
           
@@ -74,7 +73,7 @@ export default function Login() {
             <button className='login-with-code' type="button">Using a sign-in code</button>
           )}
           
-          <a href="#">{signState === 'Sign In' && 'Forgot password?'}</a>
+          <span >{signState === 'Sign In' && 'Forgot password?'}</span>
           
           {/* Remember Me Checkbox */}
           <div className='remember-me'>
@@ -85,11 +84,11 @@ export default function Login() {
           {/* Switch between Sign In and Sign Up */}
           {signState === 'Sign In' ? (
             <p className='set-sign'>New to Netflix? 
-              <a onClick={() => setSignState('Sign Up')}> Sign up now.</a>
+              <span onClick={() => setSignState('Sign Up')}> Sign up now.</span>
             </p>
           ) : (
             <p className='set-sign'>Already have an account?
-              <a onClick={() => setSignState('Sign In')}> Sign in now.</a>
+              <span onClick={() => setSignState('Sign In')}> Sign in now.</span>
             </p>
           )}
         </form>
@@ -99,14 +98,14 @@ export default function Login() {
       <div className="login-footer">
         <p className='footer-text'>
           This page is protected by Google reCAPTCHA to ensure you're not a bot. 
-          <a href="#"> Learn more.</a>
+          <span> Learn more.</span>
         </p>
-        <p>Questions? Call <a href="tel:000-800-040-1843">000-800-040-1843</a></p>
+        <p>Questions? Call <span>000-800-040-1843</span></p>
 
         {/* Footer Links */}
         <ul className="footer-links">
           {['FAQ', 'Help Center', 'Terms of Use', 'Privacy', 'Cookie Preferences', 'Corporate Information'].map(link => (
-            <li key={link}><a href="#">{link}</a></li>
+            <li key={link}><span>{link}</span></li>
           ))}
         </ul>
 

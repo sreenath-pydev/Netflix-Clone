@@ -48,7 +48,7 @@
     flex-direction: column;
     width: 314px;
   }
-  .login-form p, a{
+  .login-form p, span{
     text-align: center;
     padding-top: 10px;
     color: white;
@@ -66,7 +66,7 @@
     bottom: 30px;
     text-align: start; 
   }
-  .login-form .set-sign a{
+  .login-form .set-sign span{
     text-decoration: none;
     font-weight: bold;
     cursor: pointer;
@@ -109,10 +109,11 @@
     font-size: 13px;
     padding-top: 10px;
   }
-  .login-footer .footer-text a{
+  .login-footer .footer-text span{
     color: dodgerblue;
+    cursor: pointer;
   }
-  .login-footer a {
+  .login-footer span {
     color: #757575;
     text-decoration: none;
     margin: 0 10px;
@@ -146,7 +147,14 @@
   .footer-country {
     margin-top: 20px;
   }
-  
+  .spinner-loading{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+  }
   /* Mobile View Styles */
 @media (max-width: 768px) {
     
