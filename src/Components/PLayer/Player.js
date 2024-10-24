@@ -12,7 +12,7 @@ export default function Player() {
 
   // Fetch the trailer for the movie based on the ID
   useEffect(() => {
-    console.log(`Fetching trailer for movie ID: ${id}`);
+    //console.log(`Fetching trailer for movie ID: ${id}`);
 
     // Fetch movie videos from TMDb API
     axios
@@ -26,6 +26,7 @@ export default function Player() {
         }
       })
       .catch((error) => {
+        alert("Trailer Not Available");
         console.error("Error fetching video data:", error);
       });
   }, []);
