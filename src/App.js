@@ -21,14 +21,14 @@ function App() {
         //console.log('Logged out')
     }
     });
-  }, []);
+  }, [navigate]);
 
   return (
     <div className="App">
       <ToastContainer theme="dark" />
       <Routes>
-        <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/" element={<Home />} />
         <Route path="/player/:id" element={<Player />} />
       </Routes>
     </div>
