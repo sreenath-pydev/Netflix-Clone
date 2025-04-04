@@ -3,7 +3,7 @@
 ![Netflix Logo](https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg)
 
 ## Visit My Website
-Check out my project at [netflixclone.com](http://netflix-clone-bucket-s3.s3-website.eu-north-1.amazonaws.com)
+Check out my project at [Live](https://netflix-clone-silk-psi-68.vercel.app/)
 # Netflix Clone
 This project is a Netflix clone built using React, designed to replicate the user interface and functionality of the popular streaming service. The application fetches data from The Movie Database (TMDb) API to display trending movies, TV shows, and their trailers.
 
@@ -39,13 +39,12 @@ To run this project locally, you will need to obtain an API key from The Movie D
    - Create a new project and enable Authentication (Email/Password method).
    - Add your Firebase configuration details to your project.
      
-## Hosting on AWS
-
-This project is hosted on **AWS S3** (Amazon Simple Storage Service), which provides a reliable and scalable solution for serving static websites. Here are some key points about the deployment:
-
-- **Static Website Hosting**: The application is deployed as a static website, allowing for fast load times and easy scalability.
-- **S3 Bucket Configuration**: The S3 bucket is configured to serve the React app, with appropriate permissions set for public access.
-- **Domain Management**: The site is accessible via the URL: [http://netflix-clone-bucket-s3.s3-website.eu-north-1.amazonaws.com](http://netflix-clone-bucket-s3.s3-website.eu-north-1.amazonaws.com)
+## Hosting on Vercel
+This project is hosted on **Vercel**, which provides a seamless deployment platform for frontend applications. Here are some key points about the deployment:
+- **Continuous Deployment**: The application is automatically deployed from the connected repository, enabling smooth updates with each commit.
+- **Edge Network**: Vercel's global edge network ensures fast load times for users across different geographic locations.
+- **Zero Configuration**: Deployment requires minimal setup, with automatic HTTPS, custom domains, and preview deployments for all branches.
+- **Domain Management**: The site is accessible via the Vercel-provided URL [https://netflix-clone-silk-psi-68.vercel.app](https://netflix-clone-silk-psi-68.vercel.app/)
 
 ### Getting Started
 
