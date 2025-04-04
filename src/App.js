@@ -11,15 +11,23 @@ import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   const navigate = useNavigate();
-  useEffect (() => {
+  const location = window.location.pathname;
+  
+  useEffect(() => {
     onAuthStateChanged(auth, async (user) => {
+      // Only redirect if user is on the root path or login path
       if (user) {
-        navigate("/");
-        //console.log('logged in')
-    }else{
-        navigate("/login");
-        //console.log('Logged out')
-    }
+        // If user is logged in and at login page, redirect to home
+        if (location === "/login") {
+          navigate("/");
+        }
+        // Otherwise leave them where they are
+      } else {
+        // Only redirect to login if not already there
+        if (location !== "/login") {
+          navigate("/login");
+        }
+      }
     });
   }, [navigate]);
 
