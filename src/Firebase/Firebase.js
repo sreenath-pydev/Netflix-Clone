@@ -10,14 +10,14 @@ import { toast } from "react-toastify";
 // Your web app's Firebase configuration
 
 const firebaseConfig = {
-    apiKey: "YOUR_API_KEY_HERE", // Replace with your actual API key
-    authDomain: "YOUR_AUTH_DOMAIN_HERE", // Replace with your actual Auth Domain
-    projectId: "YOUR_PROJECT_ID_HERE", // Replace with your actual Project ID
-    storageBucket: "YOUR_STORAGE_BUCKET_HERE", // Replace with your actual Storage Bucket
-    messagingSenderId: "YOUR_MESSAGING_SENDER_ID_HERE", // Replace with your actual Messaging Sender ID
-    appId: "YOUR_APP_ID_HERE", // Replace with your actual App ID
-    measurementId: "YOUR_MEASUREMENT_ID_HERE" // Replace with your actual Measurement ID
-  };
+  apiKey: "AIzaSyBAaxyrGiaVb64GfF9TCL3Qm2UVIicANXM",
+  authDomain: "netflix-clone-21588.firebaseapp.com",
+  projectId: "netflix-clone-21588",
+  storageBucket: "netflix-clone-21588.appspot.com",
+  messagingSenderId: "202564575898",
+  appId: "1:202564575898:web:4eb1d62d09ad455e5f7523",
+  measurementId: "G-3XQ9HK5D15"
+};
   
 
 // Initialize Firebase
