@@ -1,4 +1,4 @@
-/* Make sure the player container takes up the full screen */
+
 .player {
     width: 100%;
     height: 100%;
@@ -6,7 +6,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: black; /* To match YouTube background */
+    background-color: black; 
     position: absolute;
     overflow: hidden;
 }
@@ -15,8 +15,8 @@
     cursor: pointer;
 }
 .video-container {
-    width: 90%; /* Full screen width */
-    height: 90%; /* Full screen height */
+    width: 90%; 
+    height: 90%; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,8 +27,8 @@
     height: 90vh;   
 }
  .youtube-video {
-    width: 100vw; /* Full screen width */
-    height: 100vh; /* Full screen height */
+    width: 100vw; 
+    height: 100vh; 
 }
 
 /* Optional styling for player-info */

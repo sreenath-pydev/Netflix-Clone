@@ -12,8 +12,6 @@ export default function Player() {
 
   // Fetch the trailer for the movie based on the ID
   useEffect(() => {
-    //console.log(`Fetching trailer for movie ID: ${id}`);
-
     // Fetch movie videos from TMDb API
     axios
       .get(`movie/${id}/videos?api_key=${API_KEY}&language=en-US`)
