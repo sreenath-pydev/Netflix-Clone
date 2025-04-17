@@ -3,7 +3,7 @@
 ![Netflix Logo](https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg)
 
 ## Visit My Website
-Check out my project at [Live](https://netflix-clone-silk-psi-68.vercel.app/)
+Check out my project at [Live](https://netflix-clone-q9uufbwfh-sreenaths-projects-6ddb61a2.vercel.app/login)
 # Netflix Clone
 This project is a Netflix clone built using React, designed to replicate the user interface and functionality of the popular streaming service. The application fetches data from The Movie Database (TMDb) API to display trending movies, TV shows, and their trailers.
 
